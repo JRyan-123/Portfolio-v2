@@ -1,0 +1,181 @@
+
+/*fonts*/
+.monoton-regular {
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.michroma-regular {
+  font-family: "Michroma", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.montserrat-regular {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+/*colors*/
+:root{
+  --clr-blk: #1B1C20;
+  --clr-gry: #333333;
+  --clr-sltgry: #403D39;
+  --clr-wht: #FFFFFF;
+  --clr-sltwht: #CDD9E7;
+  --clr-blu: #2C73AC;
+  --clr-sltblu: #87C9FF; 
+}
+
+
+/*responsive font size*/
+.font-xsm { font-size: clamp(8px, 1vw + 0.5rem, 10px); }
+.font-sm  { font-size: clamp(10px, 1vw + 0.5rem, 12px); }
+.font-base { font-size: clamp(12px, 1vw + 0.5rem, 16px); }
+.font-med   { font-size: clamp(16px, 1vw + 0.5rem, 20px); }
+.font-lg   { font-size: clamp(24px, 1vw + 0.5rem, 30px); }
+.font-xl   { font-size: clamp(32px, 1vw + 0.5rem, 40px); }
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: var(--clr-blk);
+  color: var(--clr-wht);
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: clamp(12px, 1vw, 16px);
+  /*overflow: hidden;*/
+}
+
+
+/*  circles */
+.circle {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(50px);
+  opacity: 0.4;
+  animation: pulse 6s infinite ease-in-out;
+  z-index: 0;
+}
+.circle1 {
+  width: 350px;
+  height: 350px;
+  background: var(--clr-blu);
+  top: -20%;
+  left: 20%;
+  animation-delay: 0s;
+}
+.circle2 {
+  width: 600px;
+  height: 600px;
+  background:  var(--clr-blu);
+  bottom: -45%;
+  right: 0%;
+  animation-delay: 3s;
+}
+
+}
+/* end circles */
+
+
+
+
+
+
+/*sidebar*/
+.nav-pills .nav-link {
+  transition: background-color .18s ease;
+}
+
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: var(--clr-blu); !important;
+  box-shadow: none;
+}
+
+/* hover for non-active items (subtle) */
+.nav-pills .nav-link:not(.active):hover,
+.nav-pills .nav-link:not(.active):focus {
+  background-color: rgba(135,201,255,0.1);
+  color: #fff;
+}
+/*end sidebar*/
+
+
+
+
+
+/* timeline */
+.timeline {
+  border-left: 2px solid var(--clr-blu);
+  margin-left: 20px;
+  padding-left: 20px;
+  position: relative;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -28px;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  background: var(--clr-blu);
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.highlight {
+  color: var(--clr-blu);
+  font-weight: 500;
+}
+/*End timeline*/
+
+
+
+
+/*buttons*/
+.btn-dark:hover {
+  background-color: var(--clr-sltwht); /* Bootstrap green */
+  color: var(--clr-blk);
+  transform: translateY(-2px);
+  transition: all 0.2s ease-in-out;
+}
+
+
+/*bg-dark*/
+.bg-custom-black{
+  background: var(--clr-blk);
+}
+.bg-custom-black:hover{
+  background: var(--clr-gry);
+}
+
+
+/*project hover play video*/
+.video-hover {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  object-fit: cover; /* keep video scaling like the image */
+}
+
+/* Show video & hide image on hover */
+.card:hover .video-hover {
+  opacity: 1;
+}
+
+.card:hover .preview-img {
+  opacity: 0;
+}
