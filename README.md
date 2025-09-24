@@ -2,7 +2,7 @@
 
 Live Demo: [portfolio-v2-peach-iota.vercel.app](https://portfolio-v2-peach-iota.vercel.app/)  
 
-A modern, responsive portfolio website for **Jose Ryan**, built to showcase skills, projects, and contact info.
+A modern, responsive portfolio website, built to showcase skills, projects, and contact info.
 
 ---
 
